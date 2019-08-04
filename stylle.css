@@ -1,0 +1,217 @@
+html, body {
+    max-width: 100%;
+    margin:0;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+.heading{
+    background-color:#199EB8;
+    height:5.8vh;
+    width:100%;
+    margin-left:0;
+    float: left;
+    position:fixed;
+    z-index:100;
+    /*border-bottom:solid 3px black;*/
+    box-shadow: 1px 1px black;
+}
+
+#vision>li{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-size:2em;
+    text-align:center;list-style-type: none;
+    margin-bottom:4vh;
+}
+#mission>li{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-size:2em;
+    text-align:center;list-style-type: none;
+    margin-bottom:4vh;
+}
+#mission>ul>li{
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-size:1.7em;
+    text-align:center;
+    margin-bottom:4vh;
+    list-style-position: inside;
+}
+nav{
+    offset:0;
+
+}
+.logo{
+    float:left;
+    background-color: black;
+
+}
+.container{
+    width:100vw;
+    text-align: center;
+    padding: 0 0;
+    position:relative;
+
+
+}
+.image-container{
+    height: 23vh;
+    width:97vw;
+    background-size: cover;
+    position:relative;
+    float:left;
+}
+
+@-webkit-keyframes slide_animation{
+    0%{right:0px;}
+    30%{right:97vw;}
+    60%{right:194vw;}
+    90%{right:291vw;}
+    100%{right:291vw;}
+
+}
+
+.slide-images{
+    display: table;
+    background-size: cover;
+    width: 400vw ;
+    height:84vh;
+    position:relative;
+    -webkit-animation-name:slide_animation;
+    -webkit-animation-duration:8s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+}
+
+
+.nav{
+    list-style-type: none;
+
+    margin:0;
+
+}
+
+
+.nav > li {
+    float: left;
+
+    position: relative;
+    white-space: nowrap;
+    padding:0 1.5vw 0 1.5vw;
+
+}
+.nav li:hover>a{
+    color:darkgrey;
+}
+.nav-bar{
+    margin-top:.8vh;
+    margin-left:49vw;
+
+}
+.nav a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 3.5vh;
+    outline: none;
+    color:black;
+    font-family: "Nunito", Arial, sans-serif;
+    font-weight: 400;
+
+}
+.ribbon{
+    height:10vh;
+    width:50vw;
+    margin:2vh 10vw 2vh 25vw;
+}
+.container{
+    width:100vw;
+    position: relative;
+    text-align:center;
+
+}
+.col-sm-3{
+    color:black;
+    background-color:#199EB8;
+    width:24vw;
+    height:25vh;
+    padding:0 0.5vw 2vh 0.5vw;
+    float:left;
+    font-size:3.5em;
+    font-family: "Nunito", Arial, sans-serif;
+    margin-bottom:4vh;
+}
+
+/*about*/
+#hue{
+    position:absolute;
+    top:115vh;
+    margin-left:28vw;
+    border-radius:50%;
+
+}
+#hue2{
+    position:relative;
+    top:0;
+    margin-top:2vh;
+
+}
+.prolo{
+    margin:12vh 2vw 2vh 2vw;
+    font-family: "Nunito", Arial, sans-serif;
+    font-weight: 400;
+    font-size:1.6em;
+
+}
+#interactive{
+    margin-right:7vw;
+}
+
+#int1,#parents{
+    font-size:1.3em;
+    font-family: "Poppins", Arial, sans-serif;
+    list-style-position: inside;
+    text-align:left;
+    margin-left:2.6vw;
+}
+.a{
+    margin:10px;
+    text-align:center;
+    overflow: hidden;
+}
+.one,.two{
+    height:45vh;
+    margin:10vh 3vw 2vh 3vw;
+}
+.a>p{
+}
+.three{
+    height:30vh;
+    width:100vw;
+    margin-top:5vh;
+}
+#brush{
+    width:100vw;
+    height:30vh;
+    opacity:0.25;
+    position:relative;
+    top:0;
+    z-index:0;
+
+}
+.pre-prim-ed{
+    position:absolute;
+    top:250vh;
+    margin-left:20vw;
+    margin-right:20vw;
+    z-index:100;
+    color:black;
+    font-size:1.3em;
+    font-family: "Poppins", Arial, sans-serif;
+}
