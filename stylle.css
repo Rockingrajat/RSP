@@ -2,15 +2,42 @@ html, body {
     max-width: 100%;
     margin:0;
     overflow-x: hidden;
+    overflow-y: auto;
 }
+div{
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+.center{
+    text-align:center;
+}
+.title{
+    text-align:center;
+    font-size:5vh;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-weight:bold;
+    margin-bottom:1vh;
 
+}
+.blinking{
+    animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    51%{   color:red;    }
+    65%{color:blue;}
+    99%{color:black;}
+}
 h2 {
-    font-size: 30px;
+    font-size: 3.5em;
     margin-top: 1vh;
     margin-bottom: 2vh;
     text-align: center;
     font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
+
 .heading{
     background-color:#199EB8;
     height:5.8vh;
@@ -21,27 +48,79 @@ h2 {
     z-index:100;
     /*border-bottom:solid 3px black;*/
     box-shadow: 1px 1px black;
+    z-index:10;
+}
+#mission,#vision{
+    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 6s; /* Firefox < 16 */
+    -ms-animation: fadein 6s; /* Internet Explorer */
+    -o-animation: fadein 6s; /* Opera < 12.1 */
+    animation: fadein 6s;
+    position:relative;
+    margin-top:2vh;
+}
+#mission{
+    top:1vh;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 #vision>li{
     font-family: "Raleway", Helvetica, Arial, sans-serif;
-    font-size:2em;
+    font-size:4.9vh;
     text-align:center;list-style-type: none;
-    margin-bottom:4vh;
+    
+    position:relative;
+    top:-2vh;
 }
 #mission>li{
     font-family: "Raleway", Helvetica, Arial, sans-serif;
-    font-size:2em;
+    font-size:4.8vh;
     text-align:center;list-style-type: none;
     margin-bottom:4vh;
+    position: relative;
+    top:-2vh;
 }
 #mission>ul>li{
     font-family: "Raleway", Helvetica, Arial, sans-serif;
-    font-size:1.7em;
+    font-size:3.5vh;
     text-align:center;
     margin-bottom:4vh;
     list-style-position: inside;
+    position: relative;
+    top:-2vh;
 }
+#yes,.prolo{
+    background-image: url('vision-background.jpg');
+}
+
 nav{
     offset:0;
 
@@ -60,14 +139,15 @@ nav{
 
 }
 .image-container{
-    height: 23vh;
+    height: 84vh;
     width:97vw;
     background-size: cover;
     position:relative;
     float:left;
+    
 }
 
-@-webkit-keyframes slide_animation{
+@keyframes slide_animation{
     0%{right:0px;}
     30%{right:97vw;}
     60%{right:194vw;}
@@ -82,17 +162,16 @@ nav{
     width: 400vw ;
     height:84vh;
     position:relative;
-    -webkit-animation-name:slide_animation;
-    -webkit-animation-duration:8s;
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-direction:alternate;
-    -webkit-animation-play-state:running;
+    animation-name:slide_animation;
+    animation-duration:8s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-play-state:running;
 }
 
 
 .nav{
     list-style-type: none;
-
     margin:0;
 
 }
@@ -100,7 +179,6 @@ nav{
 
 .nav > li {
     float: left;
-
     position: relative;
     white-space: nowrap;
     padding:0 1.5vw 0 1.5vw;
@@ -126,11 +204,13 @@ nav{
 
 }
 .ribbon{
+    position: relative;
+    /* top:12vh; */
     height:10vh;
-    width:50vw;
-    margin:2vh 10vw 2vh 25vw;
+    width:40vw;
+    margin:2vh 30vw 2vh 30vw;
 }
-.container{
+.data{
     width:100vw;
     position: relative;
     text-align:center;
@@ -138,22 +218,24 @@ nav{
 }
 .col-sm-3{
     color:black;
-    background-color:#199EB8;
+    background-image: url('img/parallax.jpg');
     width:24vw;
     height:25vh;
     padding:0 0.5vw 2vh 0.5vw;
     float:left;
-    font-size:3.5em;
     font-family: "Nunito", Arial, sans-serif;
-    margin-bottom:4vh;
+    margin: 4vh 0;
+    font-size: 6vh;
 }
 
 /*about*/
 #hue{
-    position:absolute;
-    top:115vh;
+    position:relative;
+    top:-44vh;
     margin-left:28vw;
     border-radius:50%;
+    opacity:1;
+    z-index:2;
 
 }
 #hue2{
@@ -163,10 +245,10 @@ nav{
 
 }
 .prolo{
-    margin:12vh 2vw 2vh 2vw;
+    margin:-43vh 4vw 2vh 4vw;
     font-family: "Nunito", Arial, sans-serif;
     font-weight: 400;
-    font-size:1.6em;
+    font-size:3.8vh;
 
 }
 #interactive{
@@ -174,44 +256,107 @@ nav{
 }
 
 #int1,#parents{
-    font-size:1.3em;
+    font-size:3vh;
     font-family: "Poppins", Arial, sans-serif;
     list-style-position: inside;
     text-align:left;
     margin-left:2.6vw;
 }
 .a{
-    margin:10px;
+    position: relative;
+    margin:5vh;
     text-align:center;
     overflow: hidden;
 }
 .one,.two{
-    height:45vh;
-    margin:10vh 3vw 2vh 3vw;
-}
-.a>p{
+    height:50vh;
+    margin:0vh 3vw 2vh 3vw;
 }
 .three{
-    height:30vh;
+    height:49vh;
     width:100vw;
     margin-top:5vh;
 }
 #brush{
     width:100vw;
-    height:30vh;
-    opacity:0.25;
+    height:40vh;
+    opacity:0.35;
     position:relative;
     top:0;
     z-index:0;
 
 }
 .pre-prim-ed{
-    position:absolute;
-    top:250vh;
+    position:relative;
+    top:-55vh;
     margin-left:20vw;
     margin-right:20vw;
-    z-index:100;
+    z-index:9;
     color:black;
-    font-size:1.3em;
+    font-size:4vh;
+    font-style:bold;
     font-family: "Poppins", Arial, sans-serif;
+}
+
+/*float aniation*/
+.slideanim.slide{
+    visibility: visible;
+    animation:slide 1s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Team styling */
+.text-center{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vh;
+    font-weight:bold;
+    margin-bottom:0vh;
+    position: relative;
+    left:35vw;
+}
+.contain{
+    height:60vh;
+    width:100vw;
+    position:relative;
+    padding:0 7vw;
+    
+}
+.team_divs{
+    height:40vh;
+    width:20vw;
+    position: relative;
+    
+}
+.card-title,.card-text{
+    
+position: relative;
+width:20vw;
+height:10vh;
+font-size:3.5vh;
+left:4vw;
+}
+
+#contactus{
+    background-image: url('vision-background.jpg');
+    height:30vh;
+    width:100vw;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vh;
+    font-weight:bold;
+}
+.logo1{
+    
+    width:5vw;
 }

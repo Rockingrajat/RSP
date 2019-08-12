@@ -1,21 +1,26 @@
 <html>
-
-    <title>Index </title>
+<head>
+    <title>RSP Homepage </title>
     <meta charset="utf-8">
     <link href="stylle.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        ('[data-toggle="counter-up"]').counterUp({
-            delay: 10,
-            time: 1000
-        });
-        if(jQuery().counterUp) {
-            ('[data-counter-up]').counterUp({
-                delay: 20,
-            });
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+
+  
+    
+    <link rel="stylesheet" href="animate.min.css">
+    <script>
+        import AOS from 'aos';
+        import 'aos/dist/aos.css';
+    
+            AOS.init();
+    </script>
+    <script src="float-panel.js"></script>
     <script>
        function myFunc(){
            document.getElementById("yes").style.backgroundColor="black";
@@ -27,9 +32,9 @@
            document.getElementById("yes").style.backgroundColor="yellow";
        }
       </script>
+</head>
 
-
-<body>
+<body >
 
 <section id="home">
 <div class="heading">
@@ -41,9 +46,9 @@
             <ul class="nav">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="https://milaap.org/fundraisers/support-deepak-kumar-2">Donate</a></li>
-                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSehPHwf_LxRPysxRKcOtCdeAqLEQTK8XwnUQQaPhPHdBJXRKg/viewform?vc=0&c=0&w=1">Join Us</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+                <li><a href="https://milaap.org/fundraisers/support-deepak-kumar-2" target="_blank">Donate</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSehPHwf_LxRPysxRKcOtCdeAqLEQTK8XwnUQQaPhPHdBJXRKg/viewform?vc=0&c=0&w=1" target="_blank">Join Us</a></li>
 
             </ul>
         </div>
@@ -68,39 +73,46 @@
     </div>
 </div>
 
-
-<div class="blank" id="yes" >
-<div id="vision"><img class="ribbon" src="img/vision1.png">
-    <li>To create equal opportunities for every child.</li></div>
- <div id="mission"><img class="ribbon" src="img/mission1.png">
- <li>To build a chain of change makers who will work towards educational equity in India.</li>
- <ul>
-     <li> To have 10 or more Pehal centres all over India.</li>
-     <li> To make leaders out of every Pehal volunteer  who will go on to bridge the gap between urban and rural education.</li>
-     <li> To inculcate strong ideas of achieveing excellence at any given field in the minds of Pehal children.</li>
- </ul>
- </div>
-
-    <div class="container">
+<div class="title blinking">RSP Learning Foundation</div>
+<div class="data ">
         <div class="row">
-            <div class="col-sm-3"><b><span data-toggle="counter-up">170</span>+ <br>Classroom Students</b></div>
-            <div class="col-sm-3"><b>100+<br> Coaching Students</b></div>
-            <div class="col-sm-3"><b>95% <br>Student Attendance</b></div>
-            <div class="col-sm-3"><b>50+ <br>Devoted Volunteers</b></div>
-
+            <div class="col-sm-3"><b><span class="counter">170</span>+ <br>Classroom Students</b></div>
+            <div class="col-sm-3"><b><span class="counter">100</span>+<br> Coaching Students</b></div>
+            <div class="col-sm-3"><b><span class="counter">95</span>%<br>Student Attendance</b></div>
+            <div class="col-sm-3"><b><span class="counter">50</span>+<br>Devoted Volunteers</b></div>
         </div>
     </div>
+<div class="blank" id="yes"  >
+        <div id="vision"><img class="ribbon" src="img/vision1.png">
+            <li>To create equal opportunities for every child.</li></div>
+        <div id="mission"><img class="ribbon" src="img/mission1.png">
+            <li>To build a chain of change makers who will work towards educational equity in India.</li>
+            <ul >
+            <li class="animated fadeInLeft"> To have 10 or more RSP centres all over India.</li>
+            <li class="animated fadeInRight"> To make leaders out of every RSP volunteer  who will go on to bridge the gap between urban and rural education.</li>
+            <li class="animated fadeInLeft"> To inculcate strong ideas of achieving excellence at any given field in the minds of RSP children.</li>
+            </ul>
+        </div>   
 </div>
-</section>
+
+</section> 
+<!-- Home section ends -->
 
 
 <section id="about" >
-    <h2 class="text-center">
+    <h2 style="text-align: center;font-family: 'Courier New', Courier, monospace; font-size: 5vh; font-weight:bold;">
         About Us:
     </h2>
     <div>
-        <img id="hue2" src="img/Background.jpg" style="width:100vw;height:60vh;opacity:0.7;" >
-        <img id="hue" src="img/About.jpg" style="width:45vw;height:50vh;"/>
+        <img class="slideanim" id="hue2" src="img/Background.jpg" style="width:100vw;height:60vh;opacity:0.4;" >
+        <div class="pre-prim-ed" >
+            <p class="center"> RSP's playschool model is exclusively designed for children who come from families that do not have roofs over their heads.
+                Children coming from such backgrounds have no idea about what an ideal childhood is and RSP wishes to provide them with just that.
+                WHY PRE PRIMARY EDUCATION?
+                Pre primary education sets the base on which all other levels of school based academic education stands on. RSP aims at building a strong base for the proper development of these children who deserve as much as any other child.
+            </p>
+            </div>
+        
     </div>
     <div class="prolo" >
         <p>
@@ -108,7 +120,7 @@
 
             So, we here at RSP, have come up with the idea of  providing JNV entrance coachings to rural underprivileged children.
             <br>
-            <b><center>HOW?</center></b><br>
+            <b class="center">HOW?</b><br>
             A selection test is conducted for students of classes 4, 5 and 8 in low facilitated government schools, based on which children are taken in for the coaching.
             RSP volunteers, help the selected set of children prepare for the entrance by holding regular weekend classes for them.
             RSP wants all the students to prepare their best and hence, tests are conducted every alternate Sunday. Special care is taken to evaluate the test results in order to pay personal attention on every child  for better future performance.
@@ -117,49 +129,100 @@
         </p>
     </div>
     <div class=" a one">
-        <div id="int1" style="float:left;width:51vw;height:30vh;margin-top:6vh;">
-            <ul style="text-align: left;margin-left:7vw;"> <div style="font-size:1.19em"><b>Issues:</b></div>
+        <div id="int1" style="float:left;width:45vw;">
+            <ul data-aos="zoom-in-up" style="text-align: left;margin-left:7vw;"> <div style="font-size:7vh;"><b>Issues:</b></div>
                 <li>Poverty</li>
                 <li>Lack of easy access to resources</li>
                 <li>Gender differentiation</li>
                 <li>Lack of teachers</li>
                 <li>Lack of infrastructure</li>
             </ul>
-                <p>Introducing modern advanced technology to traditional classroom settings thereby making the classes interesting than usual for the children.
+                <p style="margin-top:-1vh;">Introducing modern advanced technology to traditional classroom settings thereby making the classes interesting than usual for the children.
                     The results being-
                     decline in the absence rate (In fact, children arrive before the volunteers do in class.)
                 </p>
 
 
         </div>
-        <img  style="float:right;margin-right:7vw;" src="img/interactive_back.jpg">
-        <img id="interactive" style="float:right;width:25vw;height:35vh;" src="img/Interactive.jpg">
+        <div id="int1" style="float:right;width:50vw;height:40vh;margin-top:-46.5vh;">
+        <img  style="margin-right:7vw;float:right;width:40vw;" src="img/interactive_back.jpg">
+        <img data-aos="fade-up-left" id="interactive"  style="width:30vw;height:40vh;float:right;" src="img/Interactive.jpg">
+        </div>
+        
     </div>
 
     <div class="a two">
-        <div id="parents" style="float:right;width:50vw;height:30vh;margin-top:6vh;">
-            <p>
+        <div id="parents" style="float:right;width:50vw;height:40vh;">
+            <p data-aos="fade-left" style="margin-top:4vh;">
                 The RSP team goes from door to door, convincing parents that education is not exclusively for the rich. The aim is to make parents notice the changes in their ward's thinking and behaviour by making them realise the importance of quality education. RSP tries to include the parents at every step of their ward's educational journey. Weekly parent-teacher meets are arranged to discuss about the problems that act as a hindrance in their ward's path towards achieving academic excellence at school level.
                 RSP thinks that it is equally important to bring awareness among the parents.
             </p>
         </div>
-        <img  style="float:left;height:9vh;" src="img/parents back.jpg">
-        <img style="float:left;width:40vw;height:30vh;" src="img/Parents2.jpg">
+        <img  style="float:left;height:10vh;" src="img/parents back.jpg">
+        <img  data-aos="fade-up-right" style="position:relative;float:left;width:40vw;height:30vh;;" src="img/Parents2.jpg">
+        
     </div>
     <div class="three">
         <img id="brush" src="img/Remoulding lives.jpg">
-        <div class="pre-prim-ed">
-            <p><center> RSP's playschool model is exclusively designed for children who come from families that do not have roofs over their heads.
-            Children coming from such backgrounds have no idea about what an ideal childhood is and RSP wishes to provide them with just that.
-            WHY PRE PRIMARY EDUCATION?
-            pre primary education sets the base on which all other levels of school based academic education stands on. RSP aims at building a strong base for the proper development of these children who deserve as much as any other child.
-        </center></p>
-        </div>
+        <img data-aos="zoom-out-up" id="hue" src="img/About.jpg" style="margin-top:4vh;width:45vw;height:45vh;"/>
+        
     </div>
 
-    <div>
-        <p>OUR TEAM:</p>
+    
+        <div class="contain">
+            <p class="text-center">OUR TEAM:</p>
+           <div class="row">
+                <div class="col-sm-3 team_divs">
+                    <img alt="" class="team-img" src="img/team-1.jpg">
+                    <span class="card-title">Sergio Fez</span><br> <span class="card-text">Art Director</span>
+                </div>
+                <div class="col-sm-3 team_divs">
+                        <img alt="" class="team-img" src="img/team-1.jpg">
+                        <span class="card-title">Sergio Fez</span><br> <span class="card-text">Art Director</span>
+                    </div>
+                    <div class="col-sm-3 team_divs ">
+                            <img alt="" class="team-img" src="img/team-1.jpg">
+                            <span class="card-title">Sergio Fez</span><br> <span class="card-text">Art Director</span>
+                        </div>
+                        <div class="col-sm-3 team_divs ">
+                    <img alt="" class="team-img" src="img/team-1.jpg">
+                    <span class="card-title">Sergio Fez</span><br> <span class="card-text">Art Director</span>
+                </div>
+            </div>
+        </div>
+        
+    
+
+    <div id="contactus">
+            <p >CONTACT US:</p>
+            <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=Pehaldhn@gmail.com" target="_blank"><img src="img/gmail.png" class="logo1"></a>
+            <a href="tel:7909054585"><img src="img/phone-call.svg" class="logo1"></a>
+            <a href="tel:7909054585"><img src="img/fb.png" class="logo1"></a>
+            
+        </nav>
     </div>
 </section>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="jquery.counterup.min.js"></script>
+  <script src="waypoint.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script>
+          jQuery(document).ready(function( )
+          {
+              $('.counter').counterUp({
+                delay: 10,
+                time: 2000,
+          });
+          });
+          
+          
+          
+   </script>
 </body>
 </html>
